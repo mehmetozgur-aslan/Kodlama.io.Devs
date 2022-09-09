@@ -9,6 +9,9 @@
   <ItemGroup>
     <Folder Include="Features\ProgrammingLanguages\Constants\" />
     <Folder Include="Features\ProgrammingLanguages\Models\" />
+    <Folder Include="Features\ProgrammingTechnologies\Constants\" />
+    <Folder Include="Features\ProgrammingTechnologies\Models\" />
+    <Folder Include="Features\ProgrammingTechnologies\Queries\GetListProgrammingTechnologyByDynamic\" />
   </ItemGroup>
 
   <ItemGroup>

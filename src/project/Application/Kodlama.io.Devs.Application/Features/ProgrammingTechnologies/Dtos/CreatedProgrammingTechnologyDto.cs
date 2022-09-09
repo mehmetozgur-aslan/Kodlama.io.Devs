@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Kodlama.io.Devs.Application.Features.ProgrammingLanguages.Dtos
+namespace Kodlama.io.Devs.Application.Features.ProgrammingTechnologies.Dtos
 {
-    public class UpdatedProgrammingLanguageDto
+    public class CreatedProgrammingTechnologyDto
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public int ProgrammingLanguageId { get; set; }
     }
 }
