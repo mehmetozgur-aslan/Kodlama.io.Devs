@@ -20,6 +20,7 @@ namespace Kodlama.io.Devs.Application.Features.SocialLinks.Profiles
         {
            
             CreateMap<IPaginate<SocialLink>, GetListSocialLinkModel>().ReverseMap();
+            CreateMap<SocialLink, GetListSocialLinkDto>().ReverseMap();
             CreateMap<SocialLink, CreatedSocialLinkDto>().ReverseMap();
             CreateMap<SocialLink, CreateSocialLinkCommand>().ReverseMap();
             CreateMap<SocialLink, UpdatedSocialLinkDto>().ReverseMap();

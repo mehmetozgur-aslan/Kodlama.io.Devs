@@ -10,6 +10,6 @@ namespace Kodlama.io.Devs.Application.Features.SocialLinks.Models
 {
     public class GetListSocialLinkModel : BasePageableModel
     {
-        public List<GetListSocialLinkDto> Items { get; set; }
+        public IList<GetListSocialLinkDto> Items { get; set; }
     }
 }
