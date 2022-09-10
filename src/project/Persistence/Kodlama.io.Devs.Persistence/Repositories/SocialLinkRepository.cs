@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace Kodlama.io.Devs.Persistence.Repositories
 {
-    public class UserRefreshTokenRepository : EfRepositoryBase<UserRefreshToken, BaseDbContext>, IUserRefreshTokenRepository
+    public class SocialLinkRepository : EfRepositoryBase<SocialLink, BaseDbContext>, ISocialLinkRepository
     {
-        public UserRefreshTokenRepository(BaseDbContext context) : base(context)
+        public SocialLinkRepository(BaseDbContext baseDbContext) : base(baseDbContext)
         {
 
         }

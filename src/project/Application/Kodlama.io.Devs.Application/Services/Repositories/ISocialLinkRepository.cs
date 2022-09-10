@@ -8,8 +8,7 @@ using System.Threading.Tasks;
 
 namespace Kodlama.io.Devs.Application.Services.Repositories
 {
-    public interface IUserRefreshTokenRepository : IAsyncRepository<UserRefreshToken>, IRepository<UserRefreshToken>
+    public interface ISocialLinkRepository : IAsyncRepository<SocialLink>, IRepository<SocialLink>
     {
-
     }
 }

@@ -1,9 +1,10 @@
-﻿using Core.Application.Pipelines.Validation;
+﻿using Application.Features.Users.Rules;
+using Core.Application.Pipelines.Validation;
+using Core.Security.JWT;
 using FluentValidation;
 using Kodlama.io.Devs.Application.Features.ProgrammingLanguages.Rules;
 using Kodlama.io.Devs.Application.Features.ProgrammingTechnologies.Rules;
-using Kodlama.io.Devs.Application.Services.Abstract;
-using Kodlama.io.Devs.Application.Services.Concrete;
+using Kodlama.io.Devs.Application.Features.SocialLinks.Rules;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -24,8 +25,9 @@ namespace Kodlama.io.Devs.Application
 
             services.AddScoped<ProgrammingLanguageBusinessRules>();
             services.AddScoped<ProgrammingTechnologyBusinessRules>();
-            services.AddScoped<ITokenService, TokenService>();
-            services.AddScoped<ITokenService, TokenService>();
+            services.AddScoped<SocialLinkBusinessRules>();
+            services.AddScoped<UserBusinessRules>();
+            services.AddScoped<ITokenHelper, JwtHelper>();
 
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 
