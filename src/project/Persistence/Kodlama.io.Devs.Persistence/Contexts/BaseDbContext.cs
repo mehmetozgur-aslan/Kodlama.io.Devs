@@ -1,4 +1,6 @@
 ﻿using Kodlama.io.Devs.Domain.Entities;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System;
@@ -10,11 +12,12 @@ using System.Threading.Tasks;
 
 namespace Kodlama.io.Devs.Persistence.Contexts
 {
-    public class BaseDbContext : DbContext
+    public class BaseDbContext : IdentityDbContext<IdentityUser, IdentityRole,string>
     {
         protected IConfiguration Configuration { get; set; }
         public DbSet<ProgrammingLanguage> ProgrammingLanguages { get; set; }
         public DbSet<ProgrammingTechnology> ProgrammingTechnologies { get; set; }
+        public DbSet<UserRefreshToken> UserRefreshTokens { get; set; }
 
 
         public BaseDbContext(DbContextOptions dbContextOptions, IConfiguration configuration) : base(dbContextOptions)
@@ -52,6 +55,13 @@ namespace Kodlama.io.Devs.Persistence.Contexts
 
             ProgrammingTechnology[] programmingTechnologyEntitySeeds = { new(1, 1, ".Net Core"), new(2, 1, "ASP .Net Mvc"), new(3, 2, "Spring Boot") };
             modelBuilder.Entity<ProgrammingTechnology>().HasData(programmingTechnologyEntitySeeds);
+
+            modelBuilder.Entity<UserRefreshToken>(x =>
+            {
+                x.HasKey(p => p.Id);
+            });
+
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

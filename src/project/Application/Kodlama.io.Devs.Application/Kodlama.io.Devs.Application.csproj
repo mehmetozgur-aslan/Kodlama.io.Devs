@@ -12,6 +12,10 @@
     <Folder Include="Features\ProgrammingTechnologies\Constants\" />
     <Folder Include="Features\ProgrammingTechnologies\Models\" />
     <Folder Include="Features\ProgrammingTechnologies\Queries\GetListProgrammingTechnologyByDynamic\" />
+    <Folder Include="Features\Users\Commands\UpdateUser\" />
+    <Folder Include="Features\Users\Constants\" />
+    <Folder Include="Features\Users\Rules\" />
+    <Folder Include="Features\Users\Queries\" />
   </ItemGroup>
 
   <ItemGroup>
